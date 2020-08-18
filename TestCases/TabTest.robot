@@ -2,7 +2,6 @@
 Resource  ../Resource/Utils.robot
 Resource  ../Resource/TabKeywords.robot
 Library  SeleniumLibrary
-Library  DebugLibrary
 Test Setup  Utils.start login session
 Test Teardown  Utils.close session
 
