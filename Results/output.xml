@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200818 11:25:15.678" rpa="false">
+<suite id="s1" name="LoginTest" source="C:\GitHub\RobotStudy\TestCases\LoginTest.robot">
+<test id="s1-t1" name="Login Test">
+<kw name="start session" library="Utils" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:15.916" level="INFO">Opening browser 'chrome' to base url 'https://www.trendyol.com/'.</msg>
+<status status="PASS" starttime="20200818 11:25:15.916" endtime="20200818 11:25:20.293"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200818 11:25:20.294" endtime="20200818 11:25:22.492"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30</arg>
+<arg>1</arg>
+<arg>Click Element</arg>
+<arg>${login_first_popup_close_button}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_first_popup_close_button}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:22.493" level="INFO">Clicking element 'xpath=//a[@class='fancybox-item fancybox-close']'.</msg>
+<status status="PASS" starttime="20200818 11:25:22.493" endtime="20200818 11:25:22.618"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:22.492" endtime="20200818 11:25:22.618"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:15.916" endtime="20200818 11:25:22.619"></status>
+</kw>
+<kw name="Click Login Button" library="LoginKeywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30</arg>
+<arg>1</arg>
+<arg>Click Element</arg>
+<arg>${login_button}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_button}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:22.622" level="INFO">Clicking element 'id=accountBtn'.</msg>
+<status status="PASS" starttime="20200818 11:25:22.621" endtime="20200818 11:25:23.152"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:22.620" endtime="20200818 11:25:23.152"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:22.619" endtime="20200818 11:25:23.153"></status>
+</kw>
+<kw name="Enter Email" library="LoginKeywords">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30</arg>
+<arg>1</arg>
+<arg>Input Text</arg>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:23.155" level="INFO">Typing text 'bowitep974@accordmail.net' into text field 'id=email'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200818 11:25:23.945" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200818 11:25:23.173" endtime="20200818 11:25:23.945"></status>
+</kw>
+<msg timestamp="20200818 11:25:23.949" level="FAIL">Element with locator 'id=email' not found.</msg>
+<status status="FAIL" starttime="20200818 11:25:23.155" endtime="20200818 11:25:23.949"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_email}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:24.951" level="INFO">Typing text 'bowitep974@accordmail.net' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20200818 11:25:24.951" endtime="20200818 11:25:25.099"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:23.154" endtime="20200818 11:25:25.099"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:23.153" endtime="20200818 11:25:25.099"></status>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30</arg>
+<arg>1</arg>
+<arg>Input Text</arg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:25.101" level="INFO">Typing text '123456a' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20200818 11:25:25.100" endtime="20200818 11:25:25.197"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:25.100" endtime="20200818 11:25:25.197"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:25.100" endtime="20200818 11:25:25.198"></status>
+</kw>
+<kw name="Click Enter Button" library="LoginKeywords">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30</arg>
+<arg>1</arg>
+<arg>Click Element</arg>
+<arg>${login_enter}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_enter}</arg>
+</arguments>
+<msg timestamp="20200818 11:25:25.200" level="INFO">Clicking element 'id=loginSubmit'.</msg>
+<status status="PASS" starttime="20200818 11:25:25.199" endtime="20200818 11:25:25.435"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:25.199" endtime="20200818 11:25:25.435"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:25.198" endtime="20200818 11:25:25.435"></status>
+</kw>
+<kw name="close session" library="Utils" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200818 11:25:25.436" endtime="20200818 11:25:27.593"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:25.436" endtime="20200818 11:25:27.594"></status>
+</kw>
+<status status="PASS" starttime="20200818 11:25:15.915" endtime="20200818 11:25:27.595" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200818 11:25:15.679" endtime="20200818 11:25:27.600"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
